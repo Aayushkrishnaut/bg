@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        #quoteContainer {
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #quote {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+
+        #newQuoteBtn {
+            padding: 10px 20px;
+            font-size: 1.6em;
+            cursor: pointer;
+            background-color: white;
+            color: blue;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* Adjust the margin to your preference */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="quoteContainer">
+        <div id="quote"></div>
+    </div>
+    <button id="newQuoteBtn" onclick="generateQuote()">New Quote</button>
+
+    <script>
+        // Array of quotes
+        const quotes = [
+            "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions.",
+            "The soul is neither born, and nor does it die.",
+            "Set thy heart upon thy work but never on its reward.",
+            "Perform your duties with dedication, leaving the results to God.",
+            "The mind is restless and difficult to restrain, but it is subdued by practice.",
+            "The wise sees knowledge and action as one; they see truly.",
+            "Yoga is the journey of the self, through the self, to the self.",
+            "Whatever happened, happened for the good. Whatever is happening, is happening for the good. Whatever will happen, will also happen for the good.",
+            "It is better to live your own destiny imperfectly than to live an imitation of somebody else’s life with perfection.",
+            "A person can rise through the efforts of his own mind; he can also sink through the same mind.",
+            "Perform your obligatory duty, because action is indeed better than inaction.",
+            "Those who are free from resentment, who do not harbor ill-will, and who are friendly and compassionate to all living beings, they are dear to Me.",
+            "The soul that is not disturbed by the incessant flow of desires—that enter like rivers into the ocean, which is ever being filled but is always still—can alone achieve peace, and not the person who strives to satisfy such desires.",
+            "The senses are higher than the body, the mind higher than the senses; above the mind is the intellect, and above the intellect is the soul.",
+            "The power of God is with you at all times; through the activities of mind, senses, breathing, and emotions; and is constantly doing all the work using you as a mere instrument.",
+            "There is neither this world, nor the world beyond. Nor happiness for the one who doubts.",
+            "One who is not disturbed in mind even amidst the threefold miseries or elated when there is happiness, and who is free from attachment, fear, and anger, is called a sage of steady mind.",
+            "The disunited mind is far from wise; how can it meditate? How be at peace? When you know no peace, how can you know joy?",
+            "There is neither this world, nor the world beyond. Nor happiness for the one who doubts.",
+            "He who has no attachments can really love others, for his love is pure and divine.",
+        ];
+
+        // Function to generate a random quote
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote").innerHTML = randomQuote;
+        }
+
+        // Initial quote display
+        generateQuote();
+    </script>
+
+</body>
+
+</html>
